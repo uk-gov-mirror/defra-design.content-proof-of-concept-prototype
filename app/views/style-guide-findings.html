@@ -1,260 +1,273 @@
 
 {% extends "layouts/main.html" %}
 
-{% set pageName="Potential new style guide guidance" %}
+{% block pageTitle %}
+  Review style guide recommendations
+{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-l">Defra style guide</span>
+    <span class="govuk-caption-l">Style guide improvements</span>
 
-    <h1 class="govuk-heading-xl">Potential new style guide guidance</h1>
+    <h1 class="govuk-heading-xl">
+      Review style guide recommendations
+    </h1>
 
-    <p class="govuk-body-l">
-      Explore patterns across Defra content that could benefit from new
-      or clearer style guidance.
+    <p class="govuk-body">
+      Review recommendations identified from content across the estate
+      and decide which ones to develop into new style guide guidance.
     </p>
 
-    <div class="govuk-inset-text">
-      This analysis represents the wider Defra content estate.
-      The findings below are illustrative examples for this prototype.
-    </div>
-
-    <h2 class="govuk-heading-m">Analysis summary</h2>
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-quarter">
-        <div class="govuk-summary-card">
-          <div class="govuk-summary-card__content">
-            <p class="govuk-body">Pages analysed</p>
-            <p class="govuk-heading-l govuk-!-margin-bottom-0">35,000</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="govuk-grid-column-one-quarter">
-        <div class="govuk-summary-card">
-          <div class="govuk-summary-card__content">
-            <p class="govuk-body">Potential guidance findings</p>
-            <p class="govuk-heading-l govuk-!-margin-bottom-0">1,248</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="govuk-grid-column-one-quarter">
-        <div class="govuk-summary-card">
-          <div class="govuk-summary-card__content">
-            <p class="govuk-body">High priority</p>
-            <p class="govuk-heading-l govuk-!-margin-bottom-0">86</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="govuk-grid-column-one-quarter">
-        <div class="govuk-summary-card">
-          <div class="govuk-summary-card__content">
-            <p class="govuk-body">Categories</p>
-            <p class="govuk-heading-l govuk-!-margin-bottom-0">5</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <h2 class="govuk-heading-m">Explore findings</h2>
-
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="finding-search">Search findings</label>
-      <div class="govuk-hint">
-        Search by topic, terminology or finding title.
-      </div>
-      <input class="govuk-input" id="finding-search" type="search">
-    </div>
-
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="finding-category">Category</label>
-      <select class="govuk-select" id="finding-category">
-        <option value="all">All categories</option>
-        <option value="terminology">Terminology</option>
-        <option value="acronyms">Acronyms and abbreviations</option>
-        <option value="capitalisation">Capitalisation</option>
-        <option value="naming">Naming conventions</option>
-        <option value="phrases">Common phrases</option>
-      </select>
-    </div>
-
-    <p class="govuk-body" id="results-count">Showing 6 sample findings</p>
-
-    <div class="govuk-table__container">
-      <table class="govuk-table" id="findings-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Potential guidance</th>
-            <th scope="col" class="govuk-table__header">Category</th>
-            <th scope="col" class="govuk-table__header">Occurrences</th>
-            <th scope="col" class="govuk-table__header">Affected pages</th>
-            <th scope="col" class="govuk-table__header">Priority</th>
-          </tr>
-        </thead>
-
-        <tbody class="govuk-table__body">
-
-          <tr class="govuk-table__row"
-              data-category="terminology"
-              data-search="variation terminology food businesses food business operator food establishment">
-            <th scope="row" class="govuk-table__header">
-              <a class="govuk-link" href="/style-guide-finding">
-                Clarify terminology for food businesses
-              </a>
-              <p class="govuk-hint govuk-!-margin-bottom-0">
-                Similar concepts described using different terms
-              </p>
-            </th>
-            <td class="govuk-table__cell">Terminology</td>
-            <td class="govuk-table__cell">184</td>
-            <td class="govuk-table__cell">96</td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--red">High</strong>
-            </td>
-          </tr>
-
-          <tr class="govuk-table__row"
-              data-category="acronyms"
-              data-search="acronyms abbreviations introduction first use">
-            <th scope="row" class="govuk-table__header">
-              <a class="govuk-link" href="/style-guide-finding">
-                Guidance on introducing specialist abbreviations
-              </a>
-              <p class="govuk-hint govuk-!-margin-bottom-0">
-                Opportunity to clarify when and how to explain abbreviations
-              </p>
-            </th>
-            <td class="govuk-table__cell">Acronyms and abbreviations</td>
-            <td class="govuk-table__cell">126</td>
-            <td class="govuk-table__cell">74</td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--yellow">Medium</strong>
-            </td>
-          </tr>
-
-          <tr class="govuk-table__row"
-              data-category="capitalisation"
-              data-search="capitalisation department organisations official names">
-            <th scope="row" class="govuk-table__header">
-              <a class="govuk-link" href="/style-guide-finding">
-                Clarify capitalisation of organisational names
-              </a>
-              <p class="govuk-hint govuk-!-margin-bottom-0">
-                Identify where writers need more specific examples
-              </p>
-            </th>
-            <td class="govuk-table__cell">Capitalisation</td>
-            <td class="govuk-table__cell">92</td>
-            <td class="govuk-table__cell">51</td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--yellow">Medium</strong>
-            </td>
-          </tr>
-
-          <tr class="govuk-table__row"
-              data-category="naming"
-              data-search="naming conventions services programmes schemes">
-            <th scope="row" class="govuk-table__header">
-              <a class="govuk-link" href="/style-guide-finding">
-                Guidance for naming services and schemes
-              </a>
-              <p class="govuk-hint govuk-!-margin-bottom-0">
-                Patterns suggest an opportunity for clearer naming principles
-              </p>
-            </th>
-            <td class="govuk-table__cell">Naming conventions</td>
-            <td class="govuk-table__cell">68</td>
-            <td class="govuk-table__cell">43</td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--yellow">Medium</strong>
-            </td>
-          </tr>
-
-          <tr class="govuk-table__row"
-              data-category="phrases"
-              data-search="common phrases contact us help support">
-            <th scope="row" class="govuk-table__header">
-              <a class="govuk-link" href="/style-guide-finding">
-                Guidance for signposting users to help
-              </a>
-              <p class="govuk-hint govuk-!-margin-bottom-0">
-                Repeated variations in phrases directing users to support
-              </p>
-            </th>
-            <td class="govuk-table__cell">Common phrases</td>
-            <td class="govuk-table__cell">57</td>
-            <td class="govuk-table__cell">38</td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--blue">Low</strong>
-            </td>
-          </tr>
-
-          <tr class="govuk-table__row"
-              data-category="terminology"
-              data-search="wildlife terminology species habitats technical terms">
-            <th scope="row" class="govuk-table__header">
-              <a class="govuk-link" href="/style-guide-finding">
-                Clarify terminology for wildlife and habitats
-              </a>
-              <p class="govuk-hint govuk-!-margin-bottom-0">
-                Potential gap in guidance for specialist environmental terms
-              </p>
-            </th>
-            <td class="govuk-table__cell">Terminology</td>
-            <td class="govuk-table__cell">42</td>
-            <td class="govuk-table__cell">29</td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--blue">Low</strong>
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
+    <p class="govuk-body">
+      Each recommendation proposes specific guidance that could help content
+      designers write more clearly and consistently.
+    </p>
 
   </div>
 </div>
 
+<h2 class="govuk-heading-l">Analysis summary</h2>
+
+<p class="govuk-body">
+  An overview of recommendations identified across the content estate.
+</p>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__content">
+        <p class="govuk-body-s">Pages analysed</p>
+        <p class="govuk-heading-l">35,000</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__content">
+        <p class="govuk-body-s">Recommendations</p>
+        <p class="govuk-heading-l">1,248</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__content">
+        <p class="govuk-body-s">High priority</p>
+        <p class="govuk-heading-l">86</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__content">
+        <p class="govuk-body-s">Categories</p>
+        <p class="govuk-heading-l">5</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<h2 class="govuk-heading-l">Explore recommendations</h2>
+
+<p class="govuk-body">
+  Search and filter the recommendations to find proposed additions to the
+  style guide that need reviewing.
+</p>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="finding-search">
+    Search recommendations
+  </label>
+  <div id="finding-search-hint" class="govuk-hint">
+    Search by terminology, subject or proposed guidance.
+  </div>
+  <input class="govuk-input" id="finding-search" type="search"
+         aria-describedby="finding-search-hint">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="category-filter">
+    Filter by category
+  </label>
+  <select class="govuk-select" id="category-filter">
+    <option value="">All categories</option>
+    <option value="Terminology">Terminology</option>
+    <option value="Acronyms and abbreviations">Acronyms and abbreviations</option>
+    <option value="Capitalisation">Capitalisation</option>
+    <option value="Naming conventions">Naming conventions</option>
+    <option value="Common phrases">Common phrases</option>
+  </select>
+</div>
+
+<p class="govuk-body-s" id="results-count" aria-live="polite">
+  Showing 6 recommendations
+</p>
+
+<div class="govuk-table-responsive">
+  <table class="govuk-table" id="findings-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Recommendation</th>
+        <th scope="col" class="govuk-table__header">Category</th>
+        <th scope="col" class="govuk-table__header">Occurrences</th>
+        <th scope="col" class="govuk-table__header">Pages affected</th>
+        <th scope="col" class="govuk-table__header">Priority</th>
+        <th scope="col" class="govuk-table__header">Status</th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row finding-row"
+          data-category="Terminology">
+        <td class="govuk-table__cell">
+          <a href="/style-guide-finding" class="govuk-link">
+            Clarify when to use food business terminology
+          </a>
+        </td>
+        <td class="govuk-table__cell">Terminology</td>
+        <td class="govuk-table__cell">184</td>
+        <td class="govuk-table__cell">96</td>
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--red">High</strong>
+        </td>
+        <td class="govuk-table__cell">Not yet decided</td>
+      </tr>
+
+      <tr class="govuk-table__row finding-row"
+          data-category="Acronyms and abbreviations">
+        <td class="govuk-table__cell">
+          <a href="/style-guide-finding" class="govuk-link">
+            Add guidance on introducing specialist terms and abbreviations
+          </a>
+        </td>
+        <td class="govuk-table__cell">Acronyms and abbreviations</td>
+        <td class="govuk-table__cell">126</td>
+        <td class="govuk-table__cell">74</td>
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--yellow">Medium</strong>
+        </td>
+        <td class="govuk-table__cell">Not yet decided</td>
+      </tr>
+
+      <tr class="govuk-table__row finding-row"
+          data-category="Capitalisation">
+        <td class="govuk-table__cell">
+          <a href="/style-guide-finding" class="govuk-link">
+            Clarify how to capitalise organisational names
+          </a>
+        </td>
+        <td class="govuk-table__cell">Capitalisation</td>
+        <td class="govuk-table__cell">92</td>
+        <td class="govuk-table__cell">51</td>
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--yellow">Medium</strong>
+        </td>
+        <td class="govuk-table__cell">Accepted</td>
+      </tr>
+
+      <tr class="govuk-table__row finding-row"
+          data-category="Naming conventions">
+        <td class="govuk-table__cell">
+          <a href="/style-guide-finding" class="govuk-link">
+            Clarify how to refer to services and schemes consistently
+          </a>
+        </td>
+        <td class="govuk-table__cell">Naming conventions</td>
+        <td class="govuk-table__cell">68</td>
+        <td class="govuk-table__cell">43</td>
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--yellow">Medium</strong>
+        </td>
+        <td class="govuk-table__cell">Declined</td>
+      </tr>
+
+      <tr class="govuk-table__row finding-row"
+          data-category="Common phrases">
+        <td class="govuk-table__cell">
+          <a href="/style-guide-finding" class="govuk-link">
+            Add guidance on signposting users to further help
+          </a>
+        </td>
+        <td class="govuk-table__cell">Common phrases</td>
+        <td class="govuk-table__cell">57</td>
+        <td class="govuk-table__cell">38</td>
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--green">Low</strong>
+        </td>
+        <td class="govuk-table__cell">Not yet decided</td>
+      </tr>
+
+      <tr class="govuk-table__row finding-row"
+          data-category="Terminology">
+        <td class="govuk-table__cell">
+          <a href="/style-guide-finding" class="govuk-link">
+            Clarify terminology for wildlife and habitats
+          </a>
+        </td>
+        <td class="govuk-table__cell">Terminology</td>
+        <td class="govuk-table__cell">42</td>
+        <td class="govuk-table__cell">29</td>
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--green">Low</strong>
+        </td>
+        <td class="govuk-table__cell">Not yet decided</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<p class="govuk-body-s govuk-!-margin-top-6">
+  The figures, recommendations and statuses shown are illustrative and are for
+  prototype purposes only. The recommendations represent possible additions
+  to the style guide, not violations of existing guidance. Statuses do not
+  update automatically when a recommendation is developed or declined.
+</p>
+
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var search = document.getElementById('finding-search')
-    var category = document.getElementById('finding-category')
-    var rows = document.querySelectorAll('#findings-table tbody tr')
-    var count = document.getElementById('results-count')
+  (function () {
+    var searchInput = document.getElementById('finding-search');
+    var categoryFilter = document.getElementById('category-filter');
+    var rows = document.querySelectorAll('.finding-row');
+    var resultsCount = document.getElementById('results-count');
 
     function filterFindings() {
-      var query = search.value.toLowerCase().trim()
-      var selectedCategory = category.value
-      var visible = 0
+      var searchTerm = searchInput.value.toLowerCase().trim();
+      var selectedCategory = categoryFilter.value;
+      var visibleCount = 0;
 
       rows.forEach(function (row) {
-        var matchesSearch =
-          row.getAttribute('data-search').indexOf(query) !== -1
-        var matchesCategory =
-          selectedCategory === 'all' ||
-          row.getAttribute('data-category') === selectedCategory
-        var show = matchesSearch && matchesCategory
+        var text = row.textContent.toLowerCase();
+        var category = row.getAttribute('data-category');
 
-        row.hidden = !show
+        var matchesSearch = text.indexOf(searchTerm) !== -1;
+        var matchesCategory = !selectedCategory ||
+          category === selectedCategory;
 
-        if (show) {
-          visible++
+        if (matchesSearch && matchesCategory) {
+          row.hidden = false;
+          visibleCount++;
+        } else {
+          row.hidden = true;
         }
-      })
+      });
 
-      count.textContent = 'Showing ' + visible +
-        (visible === 1 ? ' sample finding' : ' sample findings')
+      resultsCount.textContent = 'Showing ' + visibleCount +
+        (visibleCount === 1 ? ' recommendation' : ' recommendations');
     }
 
-    search.addEventListener('input', filterFindings)
-    category.addEventListener('change', filterFindings)
-  })
+    searchInput.addEventListener('input', filterFindings);
+    categoryFilter.addEventListener('change', filterFindings);
+  })();
 </script>
 
 {% endblock %}

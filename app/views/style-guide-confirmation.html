@@ -1,0 +1,43 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Recommendation submitted
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Recommendation submitted
+      </h1>
+      <div class="govuk-panel__body">
+        Your recommendation has been submitted for further development
+      </div>
+    </div>
+
+    <p class="govuk-body">
+      The proposed guidance can now be reviewed with relevant subject-matter
+      experts before the final wording is added to the style guide.
+    </p>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p class="govuk-body">
+      The recommendation will be checked for accuracy, clarity and scope.
+      The wording can then be refined before it is added to the style guide.
+    </p>
+
+    <p class="govuk-body">
+      <a href="/style-guide-findings" class="govuk-link">
+        Return to style guide findings
+      </a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}
